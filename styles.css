@@ -100,31 +100,39 @@ body {
 
 .form__input {
     width: 100%;
-    padding: 1.5rem 2rem;
-    border: 1px solid var(--color-light-gray);
+    padding: 1.5rem 2rem;      
     border-radius: 0.5rem;
+    border: 1px solid var(--color-light-gray);
     font-weight: 700;
     color: var(--color-dark-gray);
 }
+
 
 .form__input:focus {
     outline: 1px solid var(--color-dark-gray);
 }
 
-.form__error {
-    display: block;
+.form__validate,
+.form__validate--email {
+    display: none;
+}
+
+.form__error {    
     text-align: right;
     color: var(--color-red);
     font-style: italic;
     font-weight: 500;    
 }
 
-.form__icon-error {
-    display: block;
+.form__icon-error {    
     position: absolute;
     top: 10px;
     right: 20px;
     z-index: 10;
+}
+
+.invalid {
+    border: 1px solid var(--color-red);
 }
 
 .form__btn {

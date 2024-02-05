@@ -47,26 +47,38 @@
           <form class="form">
             <div class="form__group">
               <input type="text" name="first-name" id="first-name" placeholder="First Name" class="form__input" autocomplete="off" />
-              <p class="form__error">First Name cannot be empty</p>
-              <img src="./images/icon-error.svg" class="form__icon-error" />
+              <div class="form__validate">
+                <p class="form__error">First Name cannot be empty</p>
+                <img src="./images/icon-error.svg" class="form__icon-error" />
+              </div>              
             </div>
   
             <div class="form__group">
               <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__input" autocomplete="off" />
-              <p class="form__error">Last Name cannot be empty</p>
-              <img src="./images/icon-error.svg" class="form__icon-error" />
+              <div class="form__validate">
+                <p class="form__error">Last Name cannot be empty</p>
+                <img src="./images/icon-error.svg" class="form__icon-error" />
+              </div>   
             </div>
   
             <div class="form__group">
-              <input type="email" name="email-address" id="email-address" placeholder="Email Address" class="form__input" autocomplete="off" />
-              <p class="form__error">Looks like this is not an email</p>
-              <img src="./images/icon-error.svg" class="form__icon-error" />
+              <input type="text" name="email-address" id="email-address" placeholder="Email Address" class="form__input" autocomplete="off" />
+              <div class="form__validate">
+                <p class="form__error">Email Address cannot be empty</p>
+                <img src="./images/icon-error.svg" class="form__icon-error" />
+              </div>
+              <div class="form__validate--email">
+                <p class="form__error">Looks like this is not an email</p>
+                <img src="./images/icon-error.svg" class="form__icon-error" />
+              </div>
             </div>
   
             <div class="form__group">
               <input type="password" name="password" id="password" placeholder="Password" class="form__input" autocomplete="off" />
-              <p class="form__error">Password cannot be empty</p>
-              <img src="./images/icon-error.svg" class="form__icon-error" />
+              <div class="form__validate">                
+                <p class="form__error">Password cannot be empty</p>
+                <img src="./images/icon-error.svg" class="form__icon-error" />
+              </div>              
             </div>
   
             <input type="submit" id="submit" value="Claim your free trial" class="form__btn" />
