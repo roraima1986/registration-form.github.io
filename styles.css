@@ -112,7 +112,7 @@ body {
 }
 
 .form__error {
-    display: none;
+    display: block;
     text-align: right;
     color: var(--color-red);
     font-style: italic;
@@ -120,10 +120,11 @@ body {
 }
 
 .form__icon-error {
-    display: none;
+    display: block;
     position: absolute;
     top: 10px;
     right: 20px;
+    z-index: 10;
 }
 
 .form__btn {
@@ -169,6 +170,10 @@ body {
 
 /* MOBILE SCREEN */
 @media (max-width: 576px) {
+    body { 
+        background-image: url(./images/bg-intro-mobile.png);
+    }
+    
     .main__layout {        
         flex-direction: column;
         padding: 5rem 0;        
