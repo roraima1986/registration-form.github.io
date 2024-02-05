@@ -19,19 +19,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 formValidate.style.display = 'block'
             } else {
                 input.classList.remove('invalid');
-                formValidate.style.display = 'none' // Ocultar el mensaje de error
+                formValidate.style.display = 'none' // Ocultar el mensaje de error                          
             }
         })
 
         // Validacion de correo
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        const email = document.querySelector('#email-address').value
+        const email = document.querySelector('#email-address')
         const validateEmail = document.querySelector('.form__validate--email')
 
-        if(!emailRegex.test(email)) {            
+        if(!emailRegex.test(email.value)) {            
             validateEmail.style.display = "block"
+            email.style.color = "var(--color-red)"
+            email.style.border = "1px solid var(--color-red)"
         } else {
             validateEmail.style.display = "none"
+            email.style.color = "var(--color-dark-gray)"
+            email.style.border = "1px solid var(--color-light-gray)"
         }
     })
 })
