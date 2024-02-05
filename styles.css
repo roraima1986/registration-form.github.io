@@ -6,6 +6,7 @@
     --color-light-gray: hsl(246, 25%, 77%);
     --color-dark-gray: hsl(249, 10%, 26%);
     --color-green: hsl(154, 59%, 51%);
+    --color-green-hover:  hsla(154, 59%, 51%, .8);
 }
 
 * { 
@@ -27,7 +28,7 @@ body {
 .main {
     width: 80%;  
     min-height: 100vh;
-    margin: 0 auto;
+    margin: 0 auto;    
 }
 
 .main__layout {
@@ -47,6 +48,7 @@ body {
 .main__intro {    
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     color: var(--color-white);
 }
 
@@ -109,6 +111,21 @@ body {
     outline: 1px solid var(--color-dark-gray);
 }
 
+.form__error {
+    display: none;
+    text-align: right;
+    color: var(--color-red);
+    font-style: italic;
+    font-weight: 500;    
+}
+
+.form__icon-error {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
 .form__btn {
     width: 100%;
     padding: 1.5rem 2rem;
@@ -121,8 +138,48 @@ body {
     text-transform: uppercase;
     box-shadow: 0px 4px 1px hsl(154, 55%, 40%);
     cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.form__btn:hover {
+    background-color: var(--color-green-hover);
+}
+
+.form__terms {
+    text-align: center;
+    color: var(--color-light-gray);
+}
+
+.terms__link {
+    color: var(--color-red);
+    font-weight: 700;
+    text-decoration: none;
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 1.1rem; 
+    text-align: center; 
+    color: var(--color-dark-gray);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* MOBILE SCREEN */
+@media (max-width: 576px) {
+    .main__layout {        
+        flex-direction: column;
+        padding: 5rem 0;        
+    }
+
+    .main__title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .main__descripction {
+        text-align: center;
+    }
+}
