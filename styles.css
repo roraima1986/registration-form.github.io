@@ -179,7 +179,7 @@ body {
 /* MOBILE SCREEN */
 @media (max-width: 576px) {
     body { 
-        background-image: url(./images/bg-intro-mobile.png);
+        background-image: url('./images/bg-intro-mobile.png');
     }
     
     .main__layout {        

@@ -44,9 +44,9 @@
 
         <div class="form__card">
           
-          <form class="form">
+          <form class="form" novalidate autocomplete="off">
             <div class="form__group">
-              <input type="text" name="first-name" id="first-name" placeholder="First Name" class="form__input" autocomplete="off" />
+              <input type="text" name="first-name" id="first-name" placeholder="First Name" class="form__input" />
               <div class="form__validate">
                 <p class="form__error">First Name cannot be empty</p>
                 <img src="./images/icon-error.svg" class="form__icon-error" />
@@ -54,7 +54,7 @@
             </div>
   
             <div class="form__group">
-              <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__input" autocomplete="off" />
+              <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__input" />
               <div class="form__validate">
                 <p class="form__error">Last Name cannot be empty</p>
                 <img src="./images/icon-error.svg" class="form__icon-error" />
@@ -62,7 +62,7 @@
             </div>
   
             <div class="form__group">
-              <input type="text" name="email-address" id="email-address" placeholder="Email Address" class="form__input" autocomplete="off" />
+              <input type="email" name="email-address" id="email-address" placeholder="Email Address" class="form__input" />
               <div class="form__validate">
                 <p class="form__error">Email Address cannot be empty</p>
                 <img src="./images/icon-error.svg" class="form__icon-error" />
@@ -74,7 +74,7 @@
             </div>
   
             <div class="form__group">
-              <input type="password" name="password" id="password" placeholder="Password" class="form__input" autocomplete="off" />
+              <input type="password" name="password" id="password" placeholder="Password" class="form__input" />
               <div class="form__validate">                
                 <p class="form__error">Password cannot be empty</p>
                 <img src="./images/icon-error.svg" class="form__icon-error" />
